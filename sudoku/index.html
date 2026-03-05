@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,300;0,500;0,700;1,100;1,200;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay show">
+      <div class="game">Sudoku</div>
+      <div class="level">
+        <form>
+          <p>Select Difficulty Level</p>
+          <input
+            type="radio"
+            id="easy"
+            name="difficulty"
+            value="easy"
+            checked
+          />
+          <label for="easy">Easy</label><br />
+
+          <input type="radio" id="medium" name="difficulty" value="medium" />
+          <label for="medium">Medium</label><br />
+
+          <input type="radio" id="hard" name="difficulty" value="hard" />
+          <label for="hard">Hard</label>
+          <button type="submit" class="play">Play</button>
+        </form>
+      </div>
+      <div class="start"></div>
+    </div>
+    <main>
+      <div class="top">
+        <div class="time ui">
+          <p>Time</p>
+          <p id="time-elapsed">00:00</p>
+        </div>
+        <div class="game">Sudoku</div>
+        <div class="">
+          <button class="newgame">new game</button>
+        </div>
+      </div>
+      <div class="outer-grid"></div>
+    </main>
+    <script src="solver.js"></script>
+    <script src="generator.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

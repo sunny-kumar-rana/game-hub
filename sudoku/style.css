@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Audiowide, sans-serif;
+}
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  background-color: rgb(9, 38, 64);
+  color: whitesmoke;
+}
+.top {
+  height: 10%;
+  width: 100%;
+  background-color: rgb(15, 44, 44);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.game {
+  font-size: 3rem;
+}
+.newgame {
+  width: 7rem;
+  height: 3rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #368dff8f;
+  box-shadow: 0 0 5px black;
+  font-size: medium;
+}
+.outer-grid {
+  height: 85vh;
+  width: calc(85vh);
+  background-color: rgb(21, 21, 21);
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+.cell {
+  outline: 1px dashed rgb(189, 189, 189);
+  height: calc((85vh / 3) / 3);
+  width: calc((85vh / 3) / 3);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-border {
+  border-left: 2px solid rgb(189, 189, 189);
+}
+.top-border {
+  border-top: 2px solid rgb(189, 189, 189);
+}
+.right-border {
+  border-right: 2px solid rgb(189, 189, 189);
+}
+.bottom-border {
+  border-bottom: 2px solid rgb(189, 189, 189);
+}
+.selected {
+  background-color: #368dff8f;
+}
+.invalid {
+  background-color: rgb(185, 92, 92);
+}
+.fixed {
+  color: #79ccf2;
+}
+.overlay {
+  position: absolute;
+  background-color: #368dff8f;
+  backdrop-filter: blur(7px);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 3rem;
+}
+.overlay form {
+  font-size: 2rem;
+  padding-bottom: 40px;
+}
+.play {
+  display: block;
+  width: 50%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(141, 102, 218);
+  margin-top: 2rem;
+  margin-left: 25%;
+  font-size: large;
+  box-shadow: 0 0 5px rgb(50, 31, 88);
+}
+.hide {
+  display: none;
+}
+button:hover {
+  box-shadow: 0 0 10px red;
+}

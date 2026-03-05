@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+head,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: rgb(7, 34, 54);
+  font-family: Audiowide, sans-serif;
+}
+
+header {
+  font-size: xx-large;
+  color: whitesmoke;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  height: 90%;
+  width: 100%;
+}
+.game-card {
+  height: 40%;
+  width: 30%;
+  outline: 2px solid salmon;
+  background-color: rgb(7, 52, 87);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: whitesmoke;
+}
+.img {
+  height: 50%;
+  width: 100%;
+  object-fit: contain;
+}
+img {
+  height: 22rem;
+}
+.play {
+  height: 3rem;
+  width: 7rem;
+  background-color: salmon;
+  border-radius: 10px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.play:hover {
+  box-shadow: 0 0 10px red;
+  color: red;
+  transform: scale(1.1);
+}

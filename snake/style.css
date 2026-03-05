@@ -1,0 +1,91 @@
+:root {
+  --background-color: #111111;
+  --arena-color: #211111;
+  --snake-color: #388a09;
+  --food-color: #0093f5;
+  --text-color: #ffede3;
+
+  --blocks-size: 30px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Audiowide, sans-serif;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1% 2%;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 12vh;
+}
+.ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid salmon;
+  height: 100%;
+  width: 20%;
+  gap: 1.5rem;
+  font-size: x-large;
+  border-radius: 10px;
+  background-color: var(--arena-color);
+}
+main {
+  height: 82vh;
+  width: 100%;
+}
+.arena {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--blocks-size), 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(var(--blocks-size), 1fr));
+  outline: 1px solid salmon;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--arena-color);
+}
+.block {
+  width: var(--blocks-size);
+  height: var(--blocks-size);
+  border-radius: 10px;
+  /* border: 1px solid rgb(84, 78, 78); */
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-small;
+}
+.food {
+  background-color: var(--food-color);
+}
+.snake {
+  background-color: var(--snake-color);
+}
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  font-size: xx-large;
+  background-color: rgba(158, 158, 158, 0);
+  backdrop-filter: blur(10px);
+}
+.start {
+  padding: 1rem 2rem;
+}
