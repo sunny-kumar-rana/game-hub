@@ -33,13 +33,15 @@ main {
 .game-cards {
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* padding: 2rem; */
   height: 90%;
   width: 100%;
 }
 .game-card {
-  height: 40%;
-  width: 30%;
+  height: 36%;
+  width: auto;
   outline: 2px solid salmon;
   background-color: rgb(7, 52, 87);
   border-radius: 10px;
@@ -55,7 +57,7 @@ main {
   object-fit: contain;
 }
 img {
-  height: 22rem;
+  height: 20rem;
 }
 .play {
   height: 3rem;
