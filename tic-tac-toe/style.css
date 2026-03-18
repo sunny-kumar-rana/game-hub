@@ -19,15 +19,15 @@ body {
 
 #board {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(3, 200px);
   gap: 5px;
   justify-content: center;
   margin-top: 20px;
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   font-size: 2rem;
   cursor: pointer;
 }
