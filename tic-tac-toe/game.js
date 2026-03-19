@@ -1,5 +1,6 @@
 const boardElement = document.querySelector("#board");
 const statusText = document.querySelector("#status");
+const reset = document.querySelector("#restart");
 let board = Array(9).fill("");
 let currentPlayer = "X";
 let gameActive = true;
@@ -28,9 +29,9 @@ function handleMove(e){
     if(board[index] !== "" || !gameActive){
         return;
     }
-
+    
     makeMove(index, currentPlayer);
-
+    
     if(checkWinner(currentPlayer)){
         statusText.textContent = `${currentPlayer} wins!`;
         gameActive = false;
@@ -58,13 +59,43 @@ function checkWinner(player){
     }
     return false;
 }
-function aiMove(){}
+
+
+
+function aiMove(){
+    let mode = document.getElementById("difficulty").value;
+    let move;
+    if(mode === "easy"){
+        move = randomMove();
+    }
+    if(mode === "medium"){
+        move = mediumMove();
+    }
+    
+    makeMove(move, "O");
+    
+    if (checkWinner("O")) {
+        statusText.textContent = "AI wins!";
+        gameActive = false;
+        return;
+    }
+
+    if(board.every(value => value !== "")){
+        statusText.textContent = "Draw!";
+        gameActive = false;
+        return;
+    }
+    
+    currentPlayer = "X";
+}
+
 function randomMove(){
     const empty = board.map((value, index) => value === "" ? index : null)
-        .filter(value => value !== null);
-
+    .filter(value => value !== null);
+    
     return empty[Math.floor(Math.random() * empty.length)];
 }
+
 function mediumMove(){
     for(let i = 0; i < 9; i++){
         if(board[i] === ""){
@@ -76,12 +107,12 @@ function mediumMove(){
             board[i] = "";
         }
     }
-
+    
     for(let i = 0; i < 9; i++){
         if(board[i] === ""){
             board[i] = "X";
             if(checkWinner("X")){
-                board = "";
+                board[i] = "";
                 return i;
             }
             board[i] = "";
@@ -89,7 +120,18 @@ function mediumMove(){
     }
     return randomMove();
 }
-function hardMove(){}
 
+function resetGame(){
+    board = Array(9).fill("");
+    currentPlayer = "X";
+    gameActive = true;
+    statusText.textContent = "";
+    createBoard();
+}
+
+
+reset.addEventListener("click", _ =>{
+    resetGame();
+});
 
 createBoard();
