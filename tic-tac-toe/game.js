@@ -59,7 +59,12 @@ function checkWinner(player){
     return false;
 }
 function aiMove(){}
-function randomMove(){}
+function randomMove(){
+    const empty = board.map((value, index) => value === "" ? index : null)
+        .filter(value => value !== null);
+
+    return empty[Math.floor(Math.random() * empty.length)];
+}
 function mediumMove(){}
 function hardMove(){}
 
