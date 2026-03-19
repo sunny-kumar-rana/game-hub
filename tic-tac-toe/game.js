@@ -65,7 +65,30 @@ function randomMove(){
 
     return empty[Math.floor(Math.random() * empty.length)];
 }
-function mediumMove(){}
+function mediumMove(){
+    for(let i = 0; i < 9; i++){
+        if(board[i] === ""){
+            board[i] = "O";
+            if(checkWinner("O")){
+                board[i] = "";
+                return i;
+            }
+            board[i] = "";
+        }
+    }
+
+    for(let i = 0; i < 9; i++){
+        if(board[i] === ""){
+            board[i] = "X";
+            if(checkWinner("X")){
+                board = "";
+                return i;
+            }
+            board[i] = "";
+        }
+    }
+    return randomMove();
+}
 function hardMove(){}
 
 
