@@ -1,3 +1,17 @@
+function initSudoku(container) {
+    fetch('./sudoku/index.html')
+        .then(res => res.text())
+        .then(html => {
+            container.innerHTML = html;
+        });
+
+    return {
+        destroy() {
+            container.innerHTML = "";
+        }
+    };
+}
+
 const overlay = document.querySelector(".overlay");
 const start = document.querySelector("form");
 const outerGrid = document.querySelector(".outer-grid");

@@ -1,3 +1,17 @@
+function initTicTacToe(container) {
+    fetch('./tic-tac-toe/index.html')
+        .then(res => res.text())
+        .then(html => {
+            container.innerHTML = html;
+        });
+
+    return {
+        destroy() {
+            container.innerHTML = "";
+        }
+    };
+}
+
 const boardElement = document.querySelector("#board");
 const statusText = document.querySelector("#status");
 const reset = document.querySelector("#restart");

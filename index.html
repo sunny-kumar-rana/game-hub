@@ -15,11 +15,26 @@
   <body>
     <h1>Game Hub</h1>
 
-    <div id="menu">
-      <button onclick="loadGame('snake')">Snake</button>
-      <button onclick="loadGame('sudoku')">Sudoku</button>
-      <button onclick="loadGame('tictactoe')">Tic Tac Toe</button>
-      <button onclick="loadGame('puzzle')">Puzzle</button>
+    <div class="menu">
+      <div class="game-card" onclick="loadGame('snake')">
+        <img src="images/snake.png" alt="Snake" />
+        <p>Snake</p>
+      </div>
+
+      <div class="game-card" onclick="loadGame('sudoku')">
+        <img src="images/sudoku.png" alt="Sudoku" />
+        <p>Sudoku</p>
+      </div>
+
+      <div class="game-card" onclick="loadGame('tictactoe')">
+        <img src="images/tictactoe.png" alt="Tic Tac Toe" />
+        <p>Tic Tac Toe</p>
+      </div>
+
+      <div class="game-card" onclick="loadGame('puzzle')">
+        <img src="images/puzzle.png" alt="Puzzle" />
+        <p>Puzzle</p>
+      </div>
     </div>
 
     <div id="game-container"></div>

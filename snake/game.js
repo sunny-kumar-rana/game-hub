@@ -1,3 +1,19 @@
+function initSnake(container) {
+
+    fetch('./snake/index.html')
+        .then(res => res.text())
+        .then(html => {
+            container.innerHTML = html;
+
+        });
+
+    function destroy() {
+        container.innerHTML = "";
+    }
+
+    return { destroy };
+}
+
 window.addEventListener("keydown",(evnt)=>{
     let key = evnt.key;
     if (key === "ArrowLeft" && direction !== "ArrowRight"){

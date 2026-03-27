@@ -12,11 +12,11 @@ body {
 body {
   background-color: rgb(7, 34, 54);
   font-family: Audiowide, sans-serif;
+  color: whitesmoke;
 }
 
-header {
+h1 {
   font-size: xx-large;
-  color: whitesmoke;
   height: 5rem;
   width: 100%;
   display: flex;
@@ -30,49 +30,49 @@ main {
   justify-content: center;
   align-items: center;
 }
-.game-cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 2rem;
-  /* padding: 2rem; */
-  height: 90%;
+
+#game-container {
   width: 100%;
+  min-height: 80vh;
+  margin-top: 1rem;
 }
+
+#game-container iframe {
+  width: 100%;
+  min-height: 100vh;
+  border: none;
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .game-card {
-  height: 36%;
-  width: auto;
-  outline: 2px solid salmon;
-  background-color: rgb(7, 52, 87);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: whitesmoke;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
-.img {
-  height: 50%;
+
+.game-card img {
   width: 100%;
-  object-fit: contain;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
-img {
-  height: 20rem;
+
+.game-card p {
+  margin-top: 10px;
+  font-size: 16px;
 }
-.play {
-  height: 3rem;
-  width: 7rem;
-  background-color: salmon;
-  border-radius: 10px;
-  margin: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: whitesmoke;
-}
-.play:hover {
-  box-shadow: 0 0 10px red;
-  color: red;
-  transform: scale(1.1);
+
+.game-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: #38bdf8;
+  color: black;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
 }

@@ -1,3 +1,17 @@
+function initPuzzle(container) {
+    fetch('./puzzle/index.html')
+        .then(res => res.text())
+        .then(html => {
+            container.innerHTML = html;
+        });
+
+    return {
+        destroy() {
+            container.innerHTML = "";
+        }
+    };
+}
+
 const board = document.querySelector(".board");
 let ogTileList = [1,2,3,4,5,6,7,8,0];
 let tileList = [1,2,3,4,5,6,7,8,0];
