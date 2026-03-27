@@ -13,50 +13,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header><div class="logo">Game-Hub</div></header>
-    <main>
-      <div class="game-cards">
-        <div class="game-card">
-          <div class="img">
-            <img
-              src="./images/ChatGPT Image Mar 5, 2026, 03_23_58 PM.png"
-              alt=""
-            />
-          </div>
-          <h2 class="name">Snake-Xenia</h2>
-          <a href="./snake/index.html" class="play">play</a>
-        </div>
-        <div class="game-card">
-          <div class="img">
-            <img
-              src="./images/ChatGPT Image Mar 5, 2026, 03_24_13 PM.png"
-              alt=""
-            />
-          </div>
-          <h2 class="name">Sudoku</h2>
-          <a href="./sudoku/index.html" class="play">play</a>
-        </div>
-        <div class="game-card">
-          <div class="img">
-            <img
-              src="./images/ChatGPT Image Mar 5, 2026, 03_25_07 PM.png"
-              alt=""
-            />
-          </div>
-          <h2 class="name">Puzzle</h2>
-          <a href="./puzzle/puzzle.html" class="play">play</a>
-        </div>
-        <div class="game-card">
-          <div class="img">
-            <img
-              src="./images/ChatGPT Image Mar 18, 2026, 10_31_50 PM.png"
-              alt=""
-            />
-          </div>
-          <h2 class="name">Tic - Tac - Toe</h2>
-          <a href="./tic-tac-toe/index.html" class="play">play</a>
-        </div>
-      </div>
-    </main>
+    <h1>Game Hub</h1>
+
+    <div id="menu">
+      <button onclick="loadGame('snake')">Snake</button>
+      <button onclick="loadGame('sudoku')">Sudoku</button>
+      <button onclick="loadGame('tictactoe')">Tic Tac Toe</button>
+      <button onclick="loadGame('puzzle')">Puzzle</button>
+    </div>
+
+    <div id="game-container"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
