@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-head,
-body {
-  height: 100%;
-  width: 100%;
-}
 body {
   background-color: rgb(7, 34, 54);
   font-family: Audiowide, sans-serif;
@@ -23,19 +18,12 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-main {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-#game-container {
+/* #game-container {
   width: 100%;
   min-height: 80vh;
   margin-top: 1rem;
-}
+} */
 
 #game-container iframe {
   width: 100%;
@@ -75,4 +63,17 @@ main {
   background: #38bdf8;
   color: black;
   box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
+}
+.back {
+  display: block;
+  height: 2rem;
+  width: 7rem;
+  z-index: 1;
+  position: relative;
+  top: 9rem;
+  left: 106rem;
+  border-radius: 10px;
+  background-color: #38bdf8;
+  outline: none;
+  border: none;
 }

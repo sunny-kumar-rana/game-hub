@@ -2,7 +2,7 @@ const container = document.getElementById("game-container");
 
 function loadGame(name) {
   container.innerHTML = `
-    <button onclick="goBack()">⬅ Back</button>
+    <button class="back" onclick="goBack()">⬅ Back</button>
     <iframe
       id="game-frame"
       src="./${name}/index.html"
