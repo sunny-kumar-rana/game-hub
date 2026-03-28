@@ -1,161 +1,91 @@
-# Mini Browser Games Collection
+# Game Hub
 
-A collection of classic browser games built using **HTML, CSS, and Vanilla JavaScript**.
-The project includes three fully playable games that run directly in the browser without external libraries.
+A browser-based collection of classic mini-games accessible from a single interface. Each game runs independently inside an isolated frame, ensuring stability and preventing script conflicts.
 
----
+## Features
 
-## Live Features
+* Multiple games in one place
+* Clean and simple navigation using visual thumbnails
+* Games run in isolation using iframes
+* No external libraries or frameworks required
+* Fully client-side (no backend)
 
-✔ Classic **Snake Game** with scoring and collision detection
-✔ Fully playable **Sudoku** with difficulty levels
-✔ **Image Slide Puzzle** using dynamic image slicing
-✔ Timer and score tracking
-✔ Clean responsive UI
-✔ Pure **Vanilla JavaScript implementation**
+## Included Games
 
----
-
-## Games Included
-
-### Snake Game
-
-A classic snake game where the player controls the snake using arrow keys to eat food and grow longer.
-
-**Features**
-
-* Keyboard arrow key controls
-* Score tracking
-* Best score tracking
-* Collision detection
-* Timer display
-* Game over overlay
-
----
-
-### Sudoku
-
-A complete Sudoku puzzle generator and solver.
-
-**Features**
-
-* Difficulty levels: Easy / Medium / Hard
-* Dynamic puzzle generator
-* Backtracking solving algorithm
-* Input validation
-* Invalid move highlighting
-* Game timer
-* New game button
-
----
-
-### Image Slide Puzzle
-
-A 3×3 sliding puzzle game created using random images.
-
-**Features**
-
-* Random image generation
-* Click-to-move tiles
-* Score system
-* Timer
-* Overlay start screen
-
----
-
-## Technologies Used
-
-* **HTML5**
-* **CSS3**
-* **JavaScript (Vanilla JS)**
-* **Google Fonts**
-
-No frameworks or libraries were used.
-
----
+* Snake
+* Sudoku
+* Tic Tac Toe
+* Puzzle
 
 ## Project Structure
 
 ```
-mini-browser-games
+game-hub/
 │
-├── index.html
-├── style.css
+├── index.html          # Main hub interface
+├── script.js           # Game loader logic (iframe-based)
+├── style.css           # Global styling
+├── README.md
 │
-├── snake
+├── images/             # Game thumbnail images
+│
+├── snake/
 │   ├── index.html
 │   ├── game.js
 │   └── style.css
 │
-├── sudoku
+├── sudoku/
 │   ├── index.html
 │   ├── script.js
 │   ├── generator.js
 │   ├── solver.js
 │   └── style.css
 │
-├── slide-puzzle
+├── tic-tac-toe/
+│   ├── index.html
+│   ├── game.js
+│   └── style.css
+│
+├── puzzle/
 │   ├── puzzle.html
 │   ├── puzzle.js
 │   └── style.css
-│
-└── assets
-    ├── snake-thumbnail.png
-    ├── sudoku-thumbnail.png
-    └── puzzle-thumbnail.png
 ```
 
----
+## How It Works
 
+* The main page displays game thumbnails.
+* Clicking a game loads it inside an iframe.
+* Each game runs independently within its own environment.
+* This avoids conflicts between global variables and scripts.
 
-2. Open the project folder
+## How to Run
 
-3. Run the project
+1. Clone the repository:
 
-```
-Open index.html in your browser
-```
+   ```
+   git clone https://github.com/your-username/game-hub.git
+   ```
 
-No installation or server required.
+2. Open the project folder.
 
----
+3. Run using a local server (recommended):
 
-##  Controls
+   * VS Code Live Server
+   * or any static server
 
-### Snake
+4. Open `index.html` in your browser.
 
-| Key | Action     |
-| --- | ---------- |
-| ↑   | Move Up    |
-| ↓   | Move Down  |
-| ←   | Move Left  |
-| →   | Move Right |
+## Notes
 
-### Sudoku
-
-| Key              | Action        |
-| ---------------- | ------------- |
-| 1-9              | Insert number |
-| Backspace/Delete | Remove number |
-
-### Slide Puzzle
-
-| Action      | Description |
-| ----------- | ----------- |
-| Mouse Click | Move tile   |
-
----
+* Directly opening via file system may cause issues with loading resources.
+* Use a local server for proper functionality.
+* Each game is currently independent and not interconnected.
 
 ## Future Improvements
 
-* Mobile touch controls
-* LocalStorage leaderboard
-* Sound effects
-* Animations
-* Additional puzzle sizes
-* Dark/Light mode
-* add more games
-
----
-
-⭐ If you like this project, consider **starring the repository**.
+* Shared score tracking (localStorage or backend)
+* UI transitions between games
+* Mobile responsiveness improvements
+* Sound effects and animations
+* Game difficulty settings
